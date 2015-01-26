@@ -8,7 +8,7 @@
     <!--[if IE 9]></video><![endif]-->
 <?php endif; ?>
 
-<img<?php array_walk($this->img, function($value, $key) { echo sprintf(' %s="%s"', $key, $value); }); ?>>
+<img<?php array_walk($this->img, function($value, $key) { echo ($value ? sprintf(' %s="%s"', $key, $value) : ''); }); ?>>
 
 <?php if ($this->sources): ?>
   </picture>
